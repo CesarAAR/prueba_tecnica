@@ -41,11 +41,11 @@ main2.py
 schema.json
 schema2.json
 ```
-En la prueba se me solicitó diseñar y modelar un schema de base de datos para el JSON `datasale.json`, el problema es que cuando se llegó al tercer punto que es mandar el json a la API no tenia una idea clara de que estructura debia tener el documento para obtener un resultado `success`, por lo tanto realicé 2 schema:
+En la prueba se me solicitó diseñar y modelar un schema de base de datos para el JSON `datasale.json`, el problema es que cuando se llegó al tercer punto, que es mandar el json a la API, no tenia una idea clara de que estructura debia tener el documento para obtener un resultado `success`, por lo tanto realicé 2 schema:
 - El primero corresponde a la estructura tal cual tiene el documento `datasale.json`. Para ejecutar esta opción se usaran los siguientes documentos: `main.py`, `datasale.json`,`schema.json`
 - El segundo corresponde a un diseño y modelado propio, donde se reducen los elementos y solo se conservan valores más generales. Para ejecutar esta opción se requieren los siguientes documentos: `main2.py`, `datasale.json`,`schema2.json`
   
-__NOTA__: En el codigo se tiene un campo llamado "token", por lo que se le recuerda modificar dicha variable con el token para que funcioné el codigo. (eliminar los corchetes)
+__NOTA__: <ins> En el codigo se tiene un campo llamado "token", por lo que se le recuerda modificar dicha variable con el token para que funcioné el codigo. (eliminar los corchetes) </ins>
 
 Para ejecutar el codigo desde la terminal se ejecutará de la siguiente forma:
 - Caso 1: `python main.py --file datasale.json --schema schema.json`
