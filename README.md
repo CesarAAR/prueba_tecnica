@@ -45,7 +45,7 @@ En la prueba se me solicitó diseñar y modelar un schema de base de datos para 
 - El primero corresponde a la estructura tal cual tiene el documento `datasale.json`. Para ejecutar esta opción se usaran los siguientes documentos: `main.py`, `datasale.json`,`schema.json`
 - El segundo corresponde a un diseño y modelado propio, donde se reducen los elementos y solo se conservan valores más generales. Para ejecutar esta opción se requieren los siguientes documentos: `main2.py`, `datasale.json`,`schema2.json`
   
-__NOTA__: <ins> En el codigo se tiene un campo llamado "token", por lo que se le recuerda modificar dicha variable con el token para que funcioné el codigo. (eliminar los corchetes) </ins>
+__NOTA__: <ins> En el codigo se tiene un campo llamado "token", por lo que se le recuerda modificar dicha variable con el token para que funcione el codigo. (eliminar los corchetes) </ins>
 
 Para ejecutar el codigo desde la terminal se ejecutará de la siguiente forma:
 - Caso 1: `python main.py --file datasale.json --schema schema.json`
