@@ -1,0 +1,569 @@
+{
+    "type": "object",
+    "properties": {
+        "products": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "key": {
+                                "type": "string",
+                                "pattern": "^[0-9]{8}$"
+                            },
+                            "product": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "alias": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "inventory_id": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "inventory_name": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "vender_sin_exitencias": {
+                                "type": "string",
+                                "enum": [
+                                    "NA"
+                                ]
+                            },
+                            "description": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "cantidad_disponible": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "price_shop": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "special_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "wholesale_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "retail_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "price_sale": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "priceUnit": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "tax": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "folio_business": {
+                                "type": "string",
+                                "pattern": "^[0-9]+$"
+                            },
+                            "discount": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "quantity": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "stock": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "percent_protect": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "isservice": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "discount_percent": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "currency_dollars": {
+                                "type": "boolean"
+                            },
+                            "is_iva": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "utility_percent": {
+                                "type": "null"
+                            },
+                            "protection_percent": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "conversion": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "type_change_usd": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "is_iva_in_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "folio_product": {
+                                "type": "string",
+                                "pattern": "^[0-9]+ - [A-Z ]+ - [A-Z]+$"
+                            },
+                            "folio_name": {
+                                "type": "string",
+                                "pattern": "^[0-9]+-$"
+                            },
+                            "no_serie": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "elaborateds": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "price_sale_original": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "name_original": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "ids_no_serie": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "currency_original": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "fake_id": {
+                                "type": "string",
+                                "pattern": "^[0-9a-zA-Z]+$"
+                            },
+                            "selectedPrice": {
+                                "type": "string",
+                                "enum": [
+                                    "price_sale"
+                                ]
+                            },
+                            "other_price": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "price_unchanged": {
+                                "type": "object",
+                                "properties": {
+                                    "price": {
+                                        "type": "number",
+                                        "minimum": 0
+                                    },
+                                    "divisa": {
+                                        "type": "string",
+                                        "enum": [
+                                            "USD",
+                                            "EUR",
+                                            "MXN",
+                                            "GBP"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "price",
+                                    "divisa"
+                                ]
+                            },
+                            "subtotal": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "total": {
+                                "type": "number",
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "product",
+                            "price_sale",
+                            "quantity",
+                            "subtotal",
+                            "total"
+                        ],
+                        "additionalProperties": true
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "key": {
+                                "type": "string",
+                                "pattern": "^[0-9]{8}$"
+                            },
+                            "product": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "alias": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "inventory_id": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "inventory_name": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "vender_sin_exitencias": {
+                                "type": "string",
+                                "enum": [
+                                    "NA"
+                                ]
+                            },
+                            "description": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "cantidad_disponible": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "price_shop": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "special_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "wholesale_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "retail_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "price_sale": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "priceUnit": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "tax": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "folio_business": {
+                                "type": "string",
+                                "pattern": "^[0-9]+$"
+                            },
+                            "discount": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "quantity": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "stock": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "percent_protect": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "isservice": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "discount_percent": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "currency_dollars": {
+                                "type": "boolean"
+                            },
+                            "is_iva": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "utility_percent": {
+                                "type": "null"
+                            },
+                            "protection_percent": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "conversion": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "type_change_usd": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "is_iva_in_price": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "folio_product": {
+                                "type": "string",
+                                "pattern": "^[0-9]+ - [A-Z ]+ - [A-Z]+$"
+                            },
+                            "folio_name": {
+                                "type": "string",
+                                "pattern": "^[0-9]+-$"
+                            },
+                            "no_serie": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "elaborateds": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "price_sale_original": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                            },
+                            "name_original": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "ids_no_serie": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "currency_original": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "selectedPrice": {
+                                "type": "string",
+                                "enum": [
+                                    "price_sale"
+                                ]
+                            },
+                            "other_price": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "multipleOf": 1
+                            },
+                            "price_unchanged": {
+                                "type": "object",
+                                "properties": {
+                                    "price": {
+                                        "type": "number",
+                                        "minimum": 0
+                                    },
+                                    "divisa": {
+                                        "type": "string",
+                                        "enum": [
+                                            "USD",
+                                            "EUR",
+                                            "MXN",
+                                            "GBP"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "price",
+                                    "divisa"
+                                ]
+                            },
+                            "isTransformDlls": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "subtotal": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "total": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "fake_id": {
+                                "type": "string",
+                                "pattern": "^[0-9a-zA-Z]+$"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "product",
+                            "price_sale",
+                            "quantity",
+                            "subtotal",
+                            "total"
+                        ],
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },
+        "client_id": {
+            "type": "integer",
+            "minimun": 0,
+            "multipleOf": 1
+        },
+        "salebox_id": {
+            "type": "integer",
+            "minimun": 0,
+            "multipleOf": 1
+        },
+        "cash_cut_id": {
+            "type": "integer",
+            "minimun": 0,
+            "multipleOf": 1
+        },
+        "discount_percent": {
+            "type": "number",
+            "minimum": 0
+        },
+        "discount_money": {
+            "type": "number",
+            "minimum": 0
+        },
+        "total": {
+            "type": "number",
+            "minimum": 0
+        },
+        "document_type": {
+            "type": "string",
+            "enum": [
+                "invoice",
+                "receipt",
+                "ticket",
+                "credit_note"
+            ]
+        },
+        "date_sale": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "finished",
+                "pending",
+                "cancelled"
+            ]
+        },
+        "card_subtotal": {
+            "type": "number",
+            "minimum": 0
+        },
+        "change_type": {
+            "type": "string",
+            "enum": [
+                "cash",
+                "card",
+                "voucher",
+                "transfer",
+                "none",
+                "digital_wallet",
+                "check",
+                "credit"
+            ]
+        },
+        "taxes": {
+            "type": "number",
+            "minimum": 0
+        },
+        "fiscal_folio": {
+            "type": "null"
+        },
+        "cash_subtotal": {
+            "type": "number",
+            "minimum": 0
+        },
+        "intermediary_subtotal": {
+            "type": "number",
+            "minimum": 0
+        },
+        "transfer_subtotal": {
+            "type": "number",
+            "minimum": 0
+        },
+        "vale_subtotal": {
+            "type": "number",
+            "minimum": 0
+        },
+        "payed": {
+            "type": "number",
+            "minimum": 0
+        },
+        "currency": {
+            "type": "string",
+            "enum": [
+                "USD",
+                "EUR",
+                "MXN",
+                "GBP"
+            ]
+        }
+    },
+    "required": [
+        "products",
+        "client_id",
+        "cash_cut_id",
+        "date_sale",
+        "total"
+    ],
+    "additionalProperties": true
+}
