@@ -50,5 +50,5 @@ Para ejecutar el codigo desde la terminal se ejecutará de la siguiente forma:
 - Caso 2: `python main2.py --file datasale.json --schema schema2.json`
 
 ### Resultados
-Como se mencionó en el punto anterior. No se mencionó y no se conocía la estructura que debia tener el json para ser aceptado por la API. De hecho, realizando una investigación en la[documentación de la API](https://developers.sw.com.mx/knowledge-base/emision-timbrado-json-cfdi/) y en el mismo [Postman](https://www.postman.com/development-swsapien/sw-api-developers/request/qmumlt3/application-json) que viene en la documentación, no se lograba llegar a un resultado `success`, siempre retornando error. Por lo que el punto de realización del timbrado dio el siguiente resultado:
-[Resultados de los dos casos](/resultados.png)
+Como se mencionó en el punto anterior. No se mencionó y no se conocía la estructura que debia tener el json para ser aceptado por la API. De hecho, realizando una investigación en la [documentación de la API](https://developers.sw.com.mx/knowledge-base/emision-timbrado-json-cfdi/) y en el mismo [Postman](https://www.postman.com/development-swsapien/sw-api-developers/request/qmumlt3/application-json) que viene en la documentación, no se lograba llegar a un resultado `success`, siempre retornando error. Por lo que el punto de realización del timbrado dio el siguiente resultado:
+![Resultados de los dos casos](/resultados.png)
