@@ -14,7 +14,7 @@ client = MongoClient('localhost')
 
 # Selección de la base de datos y colección
 db = client['Sales']
-col = db['History_sales']
+col = db['History_Sales']
 
 #Variables API
 url = "https://services.test.sw.com.mx/v3/cfdi33/issue/json/v4"
